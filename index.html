@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Carte</title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+    </head>
+
+    <body>
+        <div id="stage"></div>
+        <div id="contain">
+            <div id="js-container" class="container">
+                <div class="box">
+                    <div class="box-parts">
+                        <p class="text js-text">Open &nbsp; your &nbsp; card</p>
+                    </div>
+                </div>
+            </div>
+
+            <section id="enveloppe">
+                <div class="destinataire">
+                    <p>Hello,</p>
+                </div>
+                <div class="interieur">
+                        <img src="assets/interieur.png" alt="enveloppe intérieur" />
+                </div>
+                <div id="retourner" class="retourner">
+                    <img src="assets/retourner_en.png" width="55px" alt="icone retourner" class="turn" />
+                </div>
+                <div id="ouvrir" class="ouvrir">
+                    <img src="assets/open.png" width="55px" alt="icone ouvrir" class="open" />
+                    <img src="assets/fleche.png" width="55px" class="fleche" alt="icone fleche" />
+                </div>
+                <span id="tourne">
+                    <img src="assets/carte_en.png" id="carte" class="face" alt="carte face" />
+                    <img src="assets/carte_dos_en.png" id="carte_dos" class="dos" alt="carte dos" />
+                </span>
+                <img src="assets/enveloppe_top.png" id="env_top" class="env_top" alt="enveloppe top" />
+                <img src="assets/enveloppe_entier.png" id="env_entier" class="env_entier" alt="enveloppe entier" />
+            </section>
+        </div>
+
+        <script src="js/particules.js" type="text/javascript"></script>
+        <script src="js/animation_titre.js" type="text/javascript"></script>
+        <script src="js/animation.js" type="text/javascript"></script>
+    </body>
+</html>
