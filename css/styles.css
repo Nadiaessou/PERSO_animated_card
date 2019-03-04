@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo');
+@font-face {
+    font-family: "Perpetua italic";
+    src: url('../font/perpetua/Perpetua-Italic.otf');
+}
+
+a {
+    color: white;
+}
+
+#titleEn {
+    display: none;
+}
+#titleFr {
+    display: none;
+}
+#titleEs {
+    display: none;
+}
+#titleIt {
+    display: none;
+}
+#titleNl {
+    display: none;
+}
+
+#stage {
+    width: 100%;
+    height: 100vh;
+    background: rgba(158, 205, 222, 1);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(158, 205, 222, 1) 0%, rgba(7, 166, 214, 1) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(158, 205, 222, 1)), color-stop(100%, rgba(7, 166, 214, 1)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(158, 205, 222, 1) 0%, rgba(7, 166, 214, 1) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(158, 205, 222, 1) 0%, rgba(7, 166, 214, 1) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(158, 205, 222, 1) 0%, rgba(7, 166, 214, 1) 100%);
+    background: radial-gradient(ellipse at center, rgba(158, 205, 222, 1) 0%, rgba(7, 166, 214, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9ecdde', endColorstr='#07a6d6', GradientType=1);
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#contain {
+    position: absolute;
+    z-index: 2;
+    margin: 0 auto;
+    width: 100%;
+    padding-top: 70px;
+    font-family: 'Baloo', cursive;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: rgba(7, 166, 214, 1);
+}
+
+.destinataire {
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+    color: #009cab;
+    margin-top: 25px;
+    font-size: 26px;
+    font-family: "Perpetua italic";
+    display: none;
+    opacity: 0;
+    transition: all 1.5s;
+}
+
+/**** ENVELOPPE ****/
+
+#enveloppe {
+    margin-top: 195px;
+}
+
+.env_entier {
+    z-index: 0;
+}
+
+.env_top {
+    z-index: 1;
+    position: absolute;
+    transform-origin: top center;
+    cursor: pointer;
+}
+
+.env_open {
+    transition: all 2s;
+    transform-origin: top center;
+    transform: rotateX(180deg);
+    z-index: -2;
+}
+
+.face {
+    display: block;
+    height: 315px;
+    width: 640px;
+    position: absolute;
+
+    -webkit-backface-visibility: hidden;
+       -moz-backface-visibility: hidden;
+            backface-visibility: hidden;
+}
+
+.dos {
+    display: block;
+    height: 315px;
+    width: 640px;
+    position: absolute;
+
+    -webkit-backface-visibility: hidden;
+       -moz-backface-visibility: hidden;
+            backface-visibility: hidden;
+
+    -webkit-transform: rotateY( 180deg );
+        -moz-transform: rotateY( 180deg );
+            transform: rotateY( 180deg );
+}
+
+#tourne {
+    z-index: -1;
+    width: 640px;
+    height: 315px;
+    position: absolute;
+
+    -webkit-transition: 1s;
+       -moz-transition: 1s;
+            transition: 1s;
+
+    -webkit-transform-style: preserve-3d;
+       -moz-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+
+.tourne_anim {
+    -webkit-transform: rotateY( 180deg );
+       -moz-transform: rotateY( 180deg );
+            transform: rotateY( 180deg );
+}
+
+.carte_show {
+    animation-delay: 1.5s;
+    animation-duration: 2s;
+    animation-name: show;
+    transform: translateY(0px);
+    animation-fill-mode: forwards;
+}
+
+@keyframes show {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-315px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+#retourner {
+    position: absolute;
+    z-index: 2;
+    margin-top: -65px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+    opacity: 0;
+    transition: all 1s;
+}
+
+#ouvrir {
+    position: absolute;
+    z-index: 2;
+    margin-top: -65px;
+    height: 40px;
+    cursor: pointer;
+    width: 97%;
+    text-align: center;
+    opacity: 1;
+    animation: ouvrir 3s;
+}
+
+@keyframes ouvrir {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#ouvrir img {
+    position: absolute;
+}
+
+#ouvrir .fleche {
+    position: absolute;
+    top: 17px;
+    animation: fleche 2s infinite;
+}
+
+@keyframes fleche {
+    0% {
+        top: 25px;
+    }
+    50% {
+        top: 19px;
+    }
+    100% {
+        top: 25px;
+    }
+}
+
+
+.interieur {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    z-index: -3;
+}
+
+/********/
+
+.text,
+.box-parts p {
+    color: white;
+    font-size: 2.3em;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    line-height: 50px;
+    z-index: -2;
+}
+
+.text:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+}
+
+.text.is-animate:after {
+    animation-name: line;
+    animation-duration: 0.6s;
+    animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+    animation-fill-mode: forwards;
+}
+
+.text-parts {
+    display: inline-block;
+    transform: translateY(100%);
+}
+
+.text-parts.is-animate {
+    animation-name: slideUp;
+    animation-duration: 0.5s;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-fill-mode: forwards;
+}
+
+@keyframes line {
+    0% {
+        left: -100%;
+    }
+    40% {
+        left: 0;
+    }
+    50% {
+        left: 0;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.footer {
+    margin-top: 45px;
+    font-size: 14px;
+    font-family: arial;
+    color: white;
+    line-height: 22px;
+}
+
+.infos {
+    margin-top: 8px;
+}
+
+/********** **********/
+
+@media screen and (max-width: 1024px) {
+    .text,
+    .box-parts p {
+        font-size: 1.8em;
+        line-height: 45px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .text,
+    .box-parts p {
+        font-size: 1.2em;
+        line-height: 25px;
+    }
+  }
+
