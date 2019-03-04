@@ -5,6 +5,8 @@ Interactive envelope that we can open by clicking on it. A card will then come o
 
 https://nadiaessou.github.io/PERSO_animated_card/
 
+![Demo](assets/capture.png)
+
 ## Development:
 
 HTML  
